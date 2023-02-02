@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         //to overcome this - we can assigned a value with their datatypes
         var score: Int = 10
         var isRaining: Boolean = false
-        var fruit: String = "Mango"
+        var fruit: String = "Apple"
         var word: Char = 'a'
         var temprature: Double = 78.8
 
