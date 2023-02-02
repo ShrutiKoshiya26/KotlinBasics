@@ -1,20 +1,35 @@
 package com.basekotl.kotlibbase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.basekotl.kotlibbase.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    val TAG :String=MainActivity::class.toString()
+    val TAG: String = MainActivity::class.toString()
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        var binding: ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         //print variables
         printVars()
 
         //print arithmetic operators
         printArithmaticOperations()
+
+
+        binding.alarmbutton.setOnClickListener {
+
+            val intent = Intent(this, AlarmActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
@@ -42,4 +57,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+
 }

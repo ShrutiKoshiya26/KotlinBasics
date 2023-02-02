@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kotlin Basics</string>
+    <string name="setalarm">Set Alarm</string>
 </resources>
